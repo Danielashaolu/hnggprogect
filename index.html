@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Goals</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+        }
+        
+        body{
+            background-color: rgb(61, 61, 61);
+        }
+        .body-text{
+            margin: 0 80px;
+        }
+        .header1{
+            background-color: black;
+            border-radius: 20px;
+            color: rgba(255, 255, 255, 0.856);
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .body-cont{
+            padding: 30px;
+
+        }
+        .utcTime{
+            color: white;
+            font-size: bold;
+        }
+        .body-cont p ,li {
+            color: whitesmoke;
+            font-weight: bold;
+            line-height: 1.5;
+            font-size: 18px;
+        }
+        .body-cont  h2{
+            color: black; 
+            font-weight: bold;
+            line-height: 1.5;
+            font-size: 50px;
+                }        
+        .body-cont a{
+            color: black;
+            background-color: white;
+            display: flex;
+            padding: 5px ;
+            border-radius: 5px;
+
+            
+        }
+        @media (max-width: 900px){
+            img{
+                max-width: 75%;
+            }
+        }
+        @media (max-width: 500px){
+          .body-text{
+            width: 100%;
+            margin: 0 ;
+
+          }
+          .body-cont a{
+
+            color: black;
+            background-color: white;
+            display: flex;
+            padding: 5px;
+            border-radius: 5px;
+          }
+          img{
+            max-width: 80%;
+          }
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="body-text">
+        <div class="header1">
+        <h1> My Tech Goals For The Next Two Years</h1>
+        </div>
+    <div class="body-cont">
+    <div class="sclack-info">
+    <img data-test-id="slackDisplayPicture" src="images/slackpic(1).jpeg" alt="profilepic">
+    <h2 class="slackinfo">Slack Information</h2> 
+    <p data-test-id="slackDisplayName">Slack Name: Danny</p>
+    <p data-test-id="currentDay" id="current-day"></p>
+    <div class="utcTime" id="utcTime"></div>
+    <p data-test-id="slackEmail">Email: danielashaolu77@gmail.com</p> <br>
+    </div>
+    <div class="slack-talk">
+    <p>Hello I'm Daniel. I have really  been inspired by the world of possibilities open to every one in involved in Tech.</p>
+    <br>
+    <p>I have been fascinated by the level of knowledge and discipline that HNG has been dedicated to impacting in the life of their interns. Now
+        I want to make the most of this opportunity that has been given to me to develop, advance  my self and then immerse more into the tech community.
+     And then, be able to come up with more innovative solutions. Some of the things <I></I> want to achieve with this internship is;<br>
+
+    
+        <ul>
+            <li>To get hands on Experience that is valuable</li>
+            <li>To nerwork with other interns, mentors </li>
+            <li>To be able to collaborate with other inters</li>
+            <li>Receive guidiance from project mentors and also learn timee management</li>
+        </ul>
+    <p>Here are some of the major things i want to achieve within the next two years;</p>
+        <ul>
+            <li>To develop my self more and become a senior front end developer</li>
+            <li>To be ablr to provide top notch solutions to programming problems</li>
+            <li>To develop a strong portfolio with various projects</li>
+        </ul>
+    </div>
+
+       <p>  To learn more about this, Visist the links below </p><br>
+        <a href="https://hng.tech/learn">Learn More about HNG</a><br>
+        <a href="https://keyword.dog/">keyword.dog</a> <br>
+        <a href="https://scrapeanyweb.site/">scrapeany.website</a> <br>
+    </p>
+    </div>
+    </div>
+    
+
+
+    <script>
+
+
+    function getCurrentDay() {
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const today = new Date();
+        return daysOfWeek[today.getDay()];
+
+
+    }
+    document.getElementById("current-day").innerText = "Today is " + getCurrentDay();
+
+
+
+
+
+        function displayUTCTime() {
+
+            const now = new Date();
+
+
+            const hours = now.getUTCHours();
+            const minutes = now.getUTCMinutes();
+            const seconds = now.getUTCSeconds();
+
+
+            const formattedTime = 
+                String(hours).padStart(2, '0') + ':' + 
+                String(minutes).padStart(2, '0') + ':' + 
+                String(seconds).padStart(2, '0');
+
+
+            document.getElementById('utcTime').textContent = 'Current UTC Time: ' + formattedTime;
+        }
+
+
+        displayUTCTime();
+
+
+        setInterval(displayUTCTime, 1000);
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
